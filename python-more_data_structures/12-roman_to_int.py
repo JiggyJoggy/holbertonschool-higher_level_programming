@@ -13,5 +13,5 @@ def roman_to_int(roman_string):
             index += 2
         else:
             number += roman[roman_string[index]]
-            index++
+            index += 1
     return number
