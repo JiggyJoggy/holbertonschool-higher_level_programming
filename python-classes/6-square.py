@@ -55,7 +55,6 @@ class Square:
             return
         for index in range(self.__position[1]):
             print()
-            return
         for row in range(self.__size):
             for index_2 in range(self.__position[0]):
                 print(" ", end="")
