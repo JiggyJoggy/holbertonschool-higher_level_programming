@@ -1,0 +1,23 @@
+#4-print_square.py
+
+=======================
+How to use print_square
+=======================
+
+Function that takes one argument 'size' as input and in return
+prints out a square using the character '#'
+
+======
+Import
+======
+
+>>> print_square = __import__('4-print_square').print_square
+
+============
+Regular test
+============
+
+>>> print_square(3)
+###
+###
+###
