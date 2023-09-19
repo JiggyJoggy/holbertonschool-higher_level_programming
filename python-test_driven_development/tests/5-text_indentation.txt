@@ -15,8 +15,8 @@ Import
 Regular test
 ============
 
->>> text_indentation("""Hello.""")
-Hello.
+>>> text_indentation("""Hello?""")
+Hello?
 <BLANKLINE>
 
 ============
