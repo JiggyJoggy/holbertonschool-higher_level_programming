@@ -1,0 +1,20 @@
+#3-say_my_name.py
+
+======================
+How to use say_my_name
+======================
+
+A function that takes two arguments 'first_name' and 'last_name' as input and in return
+prints out a phrase: "My name is <first_name> <last_name>."
+
+======
+Import
+======
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+============
+Regular test
+============
+
+>>> say_my_name("Jagger", "Van Winkle")
+My name is Jagger Van Winkle.
