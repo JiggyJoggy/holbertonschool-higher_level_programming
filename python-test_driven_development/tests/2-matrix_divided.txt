@@ -1,1 +1,24 @@
 #2-matrix_divided.py
+
+=========================
+How to use matrix_divided
+=========================
+
+A function that takes two arguments 'matrix' and 'div' as input and returns a
+new matrix from every element of the list of lists from 'matrix' is divided by the
+argument 'div'
+
+======
+Import
+======
+
+Import module:
+
+>>> matrix_divided = __import('2-matrix_divided').matrix_divided
+
+============
+Regular test
+============
+
+>>> matrix_divided([[2, 4, 8, [1, 2, 3]], 2)
+[[1.0, 2.0, 4.0], [0.5, 1.0, 1.5]]
