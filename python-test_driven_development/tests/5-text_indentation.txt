@@ -17,7 +17,7 @@ Regular test
 
 >>> text_indentation("""Hello.""")
 Hello.
-<\n>
+<BLANKLINE>
 
 ============
 Integer test
