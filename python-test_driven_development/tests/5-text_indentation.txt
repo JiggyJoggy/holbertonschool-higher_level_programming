@@ -1,0 +1,18 @@
+#5-text_indentation.py
+
+===========================
+How to use text_indentation
+===========================
+
+A function that prints a text with 2 new lines after each of these characters: ., ? and :
+======
+Import
+======
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+============
+Regular test
+============
+
+>>>
