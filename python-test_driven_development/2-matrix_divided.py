@@ -13,7 +13,7 @@ def matrix_divided(matrix, div):
             raise TypeError(type_error)
         for elem in row:
             if not isinstance(elem, (int, float)):
-                raise TypeError(type_errpr)
+                raise TypeError(type_error)
         if len(row) != len(matrix[0]):
             raise TypeError("Each row of the matrix must have the same size")
     if div == 0:
