@@ -1,1 +1,29 @@
 #0-add_integer.py
+
+======================
+How to use add_integer
+======================
+
+A function with two arguments 'a' and 'b' as input and returns the result
+of their sum as one integer
+
+======
+Import
+======
+
+Import function from module:
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+============
+Regular test
+============
+
+>>> add_integer(3, 2)
+5
+
+===============
+Integer casting
+===============
+
+>>> 
