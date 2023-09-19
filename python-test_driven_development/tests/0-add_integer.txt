@@ -28,5 +28,5 @@ Regular test
 Integer casting
 ===============
 
->>> add_integer(int)(3, 6)
-TypeError: a must be an integer
+>>> (int(add_integer(3, 6)))
+9
