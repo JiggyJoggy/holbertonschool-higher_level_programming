@@ -1,8 +1,8 @@
 #1-my_list
 
-=================
-How to use MyList
-=================
+==================
+How to use my_list
+==================
 
 Prints the list, but sorted (ascending sort)
 
@@ -16,66 +16,113 @@ Import
 Tests
 =====
 
->>> issubclass(MyList, list)
-True
->>> lisst = MyList()
->>> type(lisst)
-<class '1-my_list.MyList'>
->>> print(lisst)
+* printing an empty list
+>>> my_list = MyList()
+>>> print(my_list)
 []
->>> 'print_sorted' in dir(lisst)
-True
->>> lisst.print_sorted()
-[]
->>> lisst = MyList(None)
+
+* list of four positive integers
+>>> my_list = MyList([1, 2, 3, 4])
+>>> print(my_list)
+[1, 2, 3, 4]
+
+* list of four negative integers
+>>> my_list = MyList([-4, -5, -6, -7])
+>>> print(my_list)
+[-4, -5, -6, -7]
+
+* list of mixed type integers
+>>> my_list = MyList([1, 2, 3, 4, -5])
+>>> print(my_list)
+[1, 2, 3, 4, -5]
+
+* list containing a float
+>>> my_list = MyList([1.3, 2, 3, 4])
+>>> print(my_list)
+[1.3, 2, 3, 4]
+
+* list of integers and float and string
+>>> my_list = MyList([1.3, 2, 3, 'Holberton'])
+>>> print(my_list)
+[1.3, 2, 3, 'Holberton']
+
+* when the argument is None
+>>> my_list = MyList(None)
 Traceback (most recent call last):
-...
+  File "<stdin>", line 1, in <module>
 TypeError: 'NoneType' object is not iterable
->>> lisst = MyList([2, 4, 8])
->>> print(lisst)
-[2, 4, 8]
->>> lisst.print_sorted()
-[2, 4, 8]
->>> lisst = MyList()
->>> lisst.append(4)
->>> lisst.print_sorted()
-[4]
->>> lisst.append(8)
->>> lisst.append(16)
->>> lisst.print_sorted()
-[4, 8, 16]
->>> lisst.append(2)
->>> lisst.print_sorted()
-[2, 4, 8, 16]
->>> lisst.append(-32)
->>> print(lisst)
-[4, 8, 16, 2, -32]
->>> lisst.print_sorted()
-[-32, 2, 4, 8, 16]
->>> lisst = MyList()
->>> lisst.append(-1337)
->>> lisst.print_sorted()
-[-7]
->>> lisst.append(-69)
->>> lisst.append(-420)
->>> lisst.print_sorted()
-[-7, -4, -6]
->>> print(lisst)
-[-7, -9, -20]
->>> lisst.append(-0)
->>> print(lisst)
-[-7, -9, -40, 0]
->>> lisst.print_sorted()
-[-7, -40, -6, 0]
->>> lisst.append('string')
->>> print(lisst)
-[-7, -6, -40, 0, 'string']
->>> lisst.print_sorted()
+
+* error when more than 1 argument are given
+>>> my_list = MyList([1, 2, 3], [4, 5, 6])
 Traceback (most recent call last):
-...
+  File "<stdin>", line 1, in <module>
+TypeError: list expected at most 1 argument, got 2
+
+*list containing of strings
+>>> my_list = MyList(['Holberton', 'School'])
+>>> print(my_list)
+['Holberton', 'School']
+
+* appending elements to my_list and printing the result
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> my_list.append(3)
+>>> my_list.append(5)
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+
+* appending the elements which are strings
+>>> my_list = MyList()
+>>> my_list.append('Holberton')
+>>> my_list.append('School')
+>>> print(my_list)
+['Holberton', 'School']
+
+* assigning more than one (string) argument
+>>> my_list = MyList(['Holberton'], ['School'])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: list expected at most 1 argument, got 2
+
+* assigning an unsorted list of positive integers and calling the sort function
+>>> my_list = MyList([5, 8, 6, 1, 9, 3])
+>>> my_list.print_sorted()
+[1, 3, 5, 6, 8, 9]
+>>> print(my_list)
+[5, 8, 6, 1, 9, 3]
+
+* assigning an unsorted list of negative integers and calling the sort function
+>>> my_list = MyList([-4, -5, -1, -2])
+>>> my_list.print_sorted()
+[-5, -4, -2, -1]
+
+* sorting the list with a float
+>>> my_list = MyList([2, 1.5, 3, 4])
+>>> my_list.print_sorted()
+[1.5, 2, 3, 4]
+
+* calling the sorting function upon the list of strings
+>>> my_list = MyList(['Holberton', 'School'])
+>>> my_list.print_sorted()
+['Holberton', 'School']
+
+* calling the sorting function upon an empty list
+>>> my_list = MyList()
+>>> my_list.print_sorted()
+[]
+
+* calling the sorting function on a list of one element
+>>> my_list = MyList([1])
+>>> my_list.print_sorted()
+[1]
+
+* sorting the list of integers, floats and strings
+>>> my_list = MyList([3, 1.3, 2, 'Holberton'])
+>>> my_list.print_sorted()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/holbertonschool-higher_level_programming/python-inheritance/1-my_list.py", line 10, in print_sorted
+    print(sorted(self))
 TypeError: '<' not supported between instances of 'str' and 'int'
->>> del lisst
->>> print(lisst)
-Traceback (most recent call last):
-...
-NameError: name 'lisst' is not defined
