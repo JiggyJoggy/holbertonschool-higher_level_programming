@@ -2,7 +2,7 @@
 """Classes and objects"""
 
 
-__nb_objects=0
+__nb_objects = 0
 
 
 class Base():
