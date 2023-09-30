@@ -27,7 +27,7 @@ class Square(Rectangle):
         self.width = value
         self.height = value
 
-    def update(self, *args, **kargs):
+    def update(self, *args, **kwargs):
         """Args to attribute"""
         num_args = len(args)
         if num_args >= 1:
@@ -38,5 +38,5 @@ class Square(Rectangle):
             self.x = args[2]
         if num_args >= 5:
             self.y = args[3]
-        for key, value in kargs.items():
+        for key, value in kwargs.items():
             setattr(self, key, value)
