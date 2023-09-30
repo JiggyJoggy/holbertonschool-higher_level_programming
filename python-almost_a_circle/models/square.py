@@ -32,11 +32,11 @@ class Square(Rectangle):
         num_args = len(args)
         if num_args >= 1:
             self.id = args[0]
-        if num_args >= 2:
+        elif num_args >= 2:
             self.size = args[1]
-        if num_args >= 4:
+        elif num_args >= 4:
             self.x = args[2]
-        if num_args >= 5:
+        elif num_args >= 5:
             self.y = args[3]
         for key, value in kwargs.items():
             setattr(self, key, value)
