@@ -106,3 +106,7 @@ class Rectangle(Base):
             self.y = args[4]
         for key, value in kwargs.items():
             setattr(self, key, value)
+
+    def to_dictionary(self):
+        key = {'x': self.x, 'y': self.y, 'id': self.id, 'height': self.height, 'width': self.width}
+        return key
