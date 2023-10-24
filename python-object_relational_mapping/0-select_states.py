@@ -14,7 +14,7 @@ if __name__ == "__main__":
     )
     cursor = db.cursor()
     cursor.execute('SELECT * FROM states')
-    output = cursor.fetchall()
-    [print(item) for item in output]
-    cursor.close()
-    db.close()
+    states = cursor.fetchall()
+
+    for state in states:
+        print(states)
