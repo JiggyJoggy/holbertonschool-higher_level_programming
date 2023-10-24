@@ -13,7 +13,7 @@ if __name__ == "__main__":
         db=argv[3]
     )
     cursor = db.cursor()
-    cursor.execute("SELECT * FROM states")
+    cursor.execute('SELECT * FROM states')
     output = cursor.fetchall()
     [print(item) for item in output]
     cursor.close()
