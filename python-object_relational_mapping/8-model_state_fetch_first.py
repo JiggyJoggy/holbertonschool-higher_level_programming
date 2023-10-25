@@ -11,8 +11,8 @@ if __name__ == "__main__":
                            @localhost:3306/{sys.argv[3]}', pool_pre_ping=True)
     Base.metadata.create_all(engine)
     Session_maker = sessionmaker(bind=engine)
-    Session = Session_maker()
-    states = Session.query(State).order_by(State.id).first()
+    session = Session_maker()
+    states = session.query(State).order_by(State.id).first()
 
     if states in None:
         print("Nothing")
