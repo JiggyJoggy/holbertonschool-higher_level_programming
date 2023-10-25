@@ -15,7 +15,7 @@ if __name__ == "__main__":
     session_maker = sessionmaker(bind=engine)
     session = session_maker()
 
-    state = session.query(State).filter(State.name.contains('a')).all()
+    states = session.query(State).filter(State.name.contains('a')).all()
 
     for state in states:
         session.delete(state)
