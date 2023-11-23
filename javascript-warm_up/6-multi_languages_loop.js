@@ -1,5 +1,5 @@
 #!/usr/bin/node
-listLoop = [
+const listLoop = [
   'C is fun',
   'Python is cool',
   'JavaScript is amazing'
