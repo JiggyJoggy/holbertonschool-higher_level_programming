@@ -12,7 +12,7 @@ request.get(`${arg[2]}`, function (error, response, body) {
     const char = films[film].characters;
     for (const person in char) {
       if (char[person].match(/.\/18\//g)) {
-				count++;
+        count++;
       }
     }
   }
